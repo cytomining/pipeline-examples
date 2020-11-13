@@ -47,7 +47,7 @@ You must run the code in `0.download.sh`, which requires the AWS command line in
 
 ```bash
 # Download one example plate from AWS
-./download.sh
+./0.download.sh
 ```
 
 ## Step 2: Perform an image-based profiling pipeline
