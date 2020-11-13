@@ -3,8 +3,6 @@ import os.path
 
 import setuptools
 
-NOTEBOOKS = glob.glob(os.path.join("notebooks", "*.ipynb"))
-
 setuptools.setup(
     install_requires=[
         "notebook>=6.1.5",
@@ -16,7 +14,10 @@ setuptools.setup(
     ],
     name="cytominer-pipeline-examples",
     package_data={
-        "cytominer_pipeline_examples": NOTEBOOKS
+        "cytominer_pipeline_examples": [
+            *(glob.glob(os.path.join("data", "*"))),
+            *(glob.glob(os.path.join("notebooks", "*.ipynb")))
+        ]
     },
     package_dir={
         "": "src"
