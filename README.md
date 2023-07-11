@@ -30,13 +30,13 @@ mamba env create --force --file environment.yml
 * Step 0.4 - Activate the conda environment
 
 ```bash
-conda activate cytominer-example
+conda activate pycytominer-example
 ```
 
-* Step 0.5 - Alternatively, these two packages can be installed via `pip`
+* [Optional] Step 0.5 - Alternatively, the two packages (pycytominer and cytominer-eval) can be installed via `pip`
 
 ```bash
-pip install git+https://github.com/cytomining/pycytominer@c1aa34b641b4e07eb5cbd424166f31355abdbd4d
+pip install git+https://github.com/cytomining/pycytominer@8e3c28d3b81efd2c241d4c792edfefaa46698115
 pip install git+https://github.com/cytomining/cytominer-eval@6f9d350badd0a18b6c1a76171813aaf9a52f8d9f
 ```
 
@@ -47,16 +47,16 @@ You must run the code in `0.download.sh`, which requires the AWS command line in
 
 ```bash
 # Download one example plate from AWS
-./download.sh
+./0.download.sh
 ```
 
 ## Step 2: Perform an image-based profiling pipeline
 
-* Step 2.0 - Run the command `jupyter notebook` in your terminal, in the top level directory.
+* Step 2.0 - Run the command `jupyter lab` in your terminal, in the top level directory.
 
 ```bash
-# Make sure the cytominer-example environment is activated
-jupyter notebook
+# Make sure the pycytominer-example environment is activated
+jupyter lab
 ```
 
 * Step 2.1 - Navigate to `1.profile.ipynb` and follow along!
